@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{%block content%}
+<h3>Feedback Form</h3><br>
+<p>We would love to hear your thoughts, suggestions, concerns or problems with anything so we can improve!</p>
+<form action=""method="post">
+    <p>
+        {{form.feedback.label}}<br>
+        {{form.feedback(size=1000)}}
+    </p>
+    <p>Name</p>
+    <p>
+        {{form.firstname.label}}<br>
+        {{form.firstname(size=30)}}
+    </p>
+   <p>
+        {{form.lastname.label}}<br>
+        {{form.lastname(size=30)}}
+    </p>
+    <p>
+        {{form.email.label}}<br>
+        {{form.email(size=30)}}
+    </p>
+    <p>example@gmail.com</p>
+
+    <p>
+        {{form.Typequestion.label}}<br>
+        {{form.Typequestion(size=100)}}
+    </p>
+
+    <p>{{form.submit()}}</p>
+    <input type="submit" value="Calculate" id="calc_btn" />
+</form>
+{% endblock %}

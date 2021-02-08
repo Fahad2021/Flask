@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{%block content%}
+<form action=""method="post">
+   <p>
+        {{form.email.label}}
+        {{form.email(size=30)}}
+   </p>
+     <p>
+        {{form.password.label}}
+        {{form.password}}
+    </p>
+
+    <p>{{form.submit()}}</p>
+</form>
+{% endblock %}
